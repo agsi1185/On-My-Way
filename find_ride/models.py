@@ -4,7 +4,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 # Create your models here.
 
 class find_ride(models.Model):
-    origin = models.CharField(max_length=150, help_text="Enter orgin")
+    origin = models.CharField(max_length=150)
     destination = models.CharField(max_length=150)
     seats_req = models.IntegerField(
         default=1,

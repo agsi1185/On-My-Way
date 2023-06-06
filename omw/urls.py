@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from new_ride import views
 from main import views as navbar_view
+from find_ride import views as findRideView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', navbar_view.navbar, name = "main_page_view"),
-    path('new_ride_register/', views.new_ride_view, name = "new_ride_view")
+    path('new_ride_register/', views.new_ride_view, name = "new_ride_view"),
+    path('find_ride_search/', findRideView.find_ride_view, name = "find_ride_view")
 ]
