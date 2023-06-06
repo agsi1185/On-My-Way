@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from new_ride import views
+from main import views as navbar_view
+from find_ride import views as findRideView
+
 from displayRide.views import displayRides
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('new_ride_register/', views.new_ride_view, name = "new_ride_view"),
-    path('displayRide/',displayRides, name = "displayRides")
+    path('new_ride_register/', views.new_ride_view, name = "new_ride_view")
 ]

@@ -31,7 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD
     'displayRide.apps.DisplayrideConfig',
+=======
+    'main.apps.MainConfig',
+>>>>>>> dbc1211b501baa2fadbc960c19aa8892c71c69fc
     'find_ride.apps.FindRideConfig',
     'new_ride.apps.NewRideConfig',
     'django.contrib.admin',
