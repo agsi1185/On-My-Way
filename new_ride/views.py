@@ -4,9 +4,9 @@ from .forms import new_ride_form
 # Create your views here.
 def new_ride_view(request):
     context = {}
-    if request.method == "POST":
-        context['form'] = new_ride_form(request.POST)
-        if context['form'].is_valid():
-            new_ride = context['form'].save()
+    form = new_ride_form(request.POST or None)
+    if form.is_valid():
+        form.save()
 
+    context['form'] = form
     return render(request, "new_ride.html", context)

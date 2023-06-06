@@ -5,7 +5,7 @@ class new_ride_form(forms.ModelForm):
 
     class Meta:
         model = new_ride
-        fields = ['origin', 'destination', 'seats_avail']
+        fields = "__all__"
 
     # origin = forms.CharField(max_length=150)
     # destination = forms.CharField(max_length=150)
