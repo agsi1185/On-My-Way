@@ -8,4 +8,4 @@ class new_ride(models.Model):
     seats_avail = models.IntegerField()
 
     def __str__(self):
-        return self.destination
+        return self.origin
