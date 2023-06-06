@@ -1,6 +1,26 @@
-{% for ride in rides %}
-    <p>{{ride.origin}}</p>
-    <p>{{ride.destination}}</p>
-    <p>{{ride.seats_avail}}</p>
-    <hr>
-{% endfor %}
+<head>
+    <title>All Rides</title>
+    <link rel="stylesheet" type="text/css" href="./../static/display_rides.css">
+</head>
+<body>
+    <table class="ride-table">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Seats Available</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ride in rides %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ ride.origin }}</td>
+                    <td>{{ ride.destination }}</td>
+                    <td>{{ ride.seats_avail }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
