@@ -22,6 +22,9 @@
                     <td>{{ ride.origin }}</td>
                     <td>{{ ride.destination }}</td>
                     <td>{{ ride.seats_avail }}</td>
+                    <td>
+                        <button><a href="{% url 'details' ride.id %}">View Details</a></button>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
