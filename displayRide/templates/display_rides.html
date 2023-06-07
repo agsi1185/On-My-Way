@@ -1,8 +1,11 @@
-<head>
+<!-- <head>
     <title>All Rides</title>
     <link rel="stylesheet" type="text/css" href="./../static/display_rides.css">
-</head>
+</head> -->
+{% extends 'main_page.html' %}
+{% block content %}
 <body>
+    <link rel="stylesheet" type="text/css" href="./../static/display_rides.css">
     <table class="ride-table">
         <thead>
             <tr>
@@ -24,3 +27,4 @@
         </tbody>
     </table>
 </body>
+{% endblock %}
