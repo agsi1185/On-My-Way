@@ -19,7 +19,7 @@ from django.urls import path
 from new_ride import views
 from main import views as navbar_view
 from find_ride import views as findRideView
-
+from displayRide.views import displayDetails
 from displayRide.views import displayRides
 
 urlpatterns = [
@@ -28,6 +28,6 @@ urlpatterns = [
     path('new_ride_register/', views.new_ride_view, name = "new_ride_view"),
     path('displayRide/', displayRides, name = "displayRide"),
     path('find_ride_register/', findRideView.find_ride_view, name = "find_ride_search"),
-    path('deplayRide/<str:id>', navbar_view.navbar, name = "details")
+    path('deplayRide/<str:id>', displayDetails, name = "details")
     
 ]
